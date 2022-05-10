@@ -4,3 +4,7 @@
 
 4. git push -u origin main
 https://v2.tailwindcss.com/docs/installation
+
+
+intalación nuevo proyecto
+npm init vite@latest
