@@ -1,0 +1,6 @@
+1. instalar node module npm i 
+2. instalar npm install -D tailwindcss@2 postcss@latest autoprefixer@latest
+3. npx tailwindcss init -p
+
+4. git push -u origin main
+https://v2.tailwindcss.com/docs/installation
