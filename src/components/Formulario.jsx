@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Error from "./Error";
 
 function Formulario({ pacientes, setPacientes }) {
   //con los hooks puedo leer los state e ir cambiando dinamicamente
@@ -23,7 +24,7 @@ function Formulario({ pacientes, setPacientes }) {
       return;
     }
     setError(false);
-   
+
     // Objeto de Paciente
     const objetoPaciente = {
       nombre,
@@ -33,16 +34,14 @@ function Formulario({ pacientes, setPacientes }) {
       sintomas,
     };
 
-    setPacientes([...pacientes, objetoPaciente])
+    setPacientes([...pacientes, objetoPaciente]);
 
-     // Reiniciar el form
-     setNombre('')
-     setPropietario('')
-     setEmail('')
-     setFecha('')
-     setSintomas('')
-
-
+    // Reiniciar el form
+    setNombre("");
+    setPropietario("");
+    setEmail("");
+    setFecha("");
+    setSintomas("");
   };
 
   return (
@@ -58,11 +57,7 @@ function Formulario({ pacientes, setPacientes }) {
         onSubmit={handleSubmit}
         className="bg-white shadow-md rounded-lg py-10 px-5 mb-10"
       >
-        {error && (
-          <div className="bg-red-800 text-white text-center p-3 uppercase font-bold mb-3 rounded-md">
-            <p>Todos los campos son obligatorios</p>
-          </div>
-        )}
+        {error &&  <Error  mensaje='Todos los campos son obligatorios' /> }
         <div className="mb-5">
           <label
             htmlFor="mascota"
