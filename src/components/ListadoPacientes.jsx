@@ -13,8 +13,10 @@ const ListadoPacientes = ({ pacientes }) => {
       los recibe y luego los mamnda al otro componente paciente 
       para que los muestre en pantalla */}
 
-      {pacientes.map((paciente, index) => (
-        <Paciente key={index} paciente={paciente} />
+      {pacientes.map((paciente) => (
+        <Paciente 
+        //key={} 
+        paciente={paciente} />
       ))}
     </div>
   );
